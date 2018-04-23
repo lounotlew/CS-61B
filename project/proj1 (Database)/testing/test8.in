@@ -1,0 +1,3 @@
+load students;
+insert into students values '102', 'Jones', 'Jack', 'F', '2002', 'EECS', 'A+' ;
+quit;

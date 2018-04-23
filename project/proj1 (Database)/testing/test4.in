@@ -1,0 +1,13 @@
+load schedule;
+load enrolled;
+load students;
+load flavors;
+print flavors;
+select Color, Flavor from flavors where Creator = 'Jack';
+select Color, Creator from flavors, schedule where flavors.Num = schedule.Num;
+create table moreFlavors as select Flavor from flavors, schedule
+		 where flavors.Num = schedule.Num;
+print moreFlavors;
+insert into moreFlavors values 'disgusting';
+print moreFlavors;
+quit;

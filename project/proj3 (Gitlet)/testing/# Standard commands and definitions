@@ -1,0 +1,51 @@
+# Standard commands and definitions
+> init
+<<<
+# A status log header RE.  Captures the commit id in its sole group.
+D DATE "\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d"
+D COMMIT_HEAD "Commit ([a-f0-9]+)[ \t]*\n${DATE}"
+# A full log entry.  Captures the entry. Assume logs messages don't contain
+# ===
+D COMMIT_LOG "(===[ ]*\nCommit [a-f0-9]+[ ]*\n${DATE}[ ]*\n(?:.|\n)*?(?=\Z|\n===))"
+# An arbitrary line of text (works even with ?s)
+D ARBLINE "[^\n]*(?=\n|\Z)"
+# Zero or more arbitrary full lines of text.
+D ARBLINES "(?:(?:.|\n)*(?:\n|\Z)|\A|\Z)"
+
+
+h1 above h2 below
+
+# Initialize and add two files.
+I prelude1.inc
++ f.txt wug.txt
++ g.txt notwug.txt
+> add g.txt
+<<<
+> add f.txt
+<<<
+
+b bel
+
+# WELCOME TO TEST-C
+# FOR: rem add stat
+1 # Status with two adds
+2 I setup1.inc
+3 > rm f.txt
+4 <<<
+5 > status
+6 === Branches ===
+7 \*master
+8
+9. === Staged Files ===
+10. g.txt
+11.
+12. === Removed Files ===
+13.
+14. === Modifications Not Staged For Commit ===
+15.
+16. === Untracked Files ===
+17. ${ARBLINES}
+18.
+19. <<<*
+20. # File was not tracked, so make sure it's still there
+21. = f.txt wug.txt

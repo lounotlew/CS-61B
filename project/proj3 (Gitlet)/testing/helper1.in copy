@@ -1,0 +1,4 @@
+1. # Set up one commit with two files. 
+2. I helper2.in
+3. > commit "Two files" 
+4. <<< 

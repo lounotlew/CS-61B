@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> (Quiz) What does it match? </title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="../styles/survey.css">
+</head>
+<body>
+
+<h1> (Quiz) What does it match? </h1>
+
+
+
+Consider the following program fragment:
+
+<pre>
+Matcher mat = Pattern.compile (thePattern).matcher (theString);
+if (mat.matches ()) 	
+   System.out.printf ("'%s'", mat.group (1));
+else
+   System.out.println ("no");
+</pre>
+
+<div class=question>
+For each of the following combinations of values for <code>thePattern</code>
+and <code>theString</code>, indicate what is printed (include the single
+quotes in your responses):
+
+<div class=response>
+<table border=1>
+<tr> <th> thePattern </th> <th> theString </th> <th> Output </th> </tr>
+<tr> <td> <code>"([a-m/]).*"</code> </td>
+     <td> <code>"fall/2005"</code> 
+     <td> <code>'f'</code> </td>
+</tr>
+<tr> <td> <code>"([a-m/]*).*"</code> </td>
+     <td> <code>"fall/2005"</code> </td>
+     <td> <code>'fall/'</code> </td>
+</tr>
+<tr> <td> <code>".*([a-m/]*).*"</code> </td>
+     <td> <code>"fall/2005"</code> </td>
+     <td> <code>''</code> </td>
+</tr>
+<tr> <td> <code>".*([a-m/]+).*"</code> </td>
+     <td> <code>"fall/2005"</code> </td>
+     <td> <code>'/'</code> </td>
+</tr>
+<tr> <td> <code>".*?([a-m/]*).*"</code> </td>
+     <td> <code>"fall/2005"</code> </td>
+     <td> <code>'fall/'</code> </td>
+</tr>
+</table>
+</div>
+</div>
+
+</quiz>

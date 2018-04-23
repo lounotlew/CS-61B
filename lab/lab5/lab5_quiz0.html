@@ -1,0 +1,96 @@
+<html>
+<head>
+<title> (Quiz) Some polymorphism puzzles </title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="../styles/survey.css">
+</head>
+<body>
+
+<h1> (Quiz) Some polymorphism puzzles </h1>
+
+
+
+<p>
+Consider the following class definitions.
+<table width="100%" border="1"><tr><td><pre>public class Superclass { 
+ 
+  public void print ( ) { 
+    System.out.println (&quot;super&quot;); 
+  } 
+}
+</pre>
+</td>
+<td>
+<pre>
+public class Subclass extends Superclass { 
+ 
+  public void print ( ) { 
+    System.out.println (&quot;sub&quot;); 
+  } 
+}
+</pre>
+</td>
+</tr>
+</table>
+
+<p>
+Consider now the following program segments. For each, indicate
+whether it will produce (a) a compiler error message, (b) a runtime
+error message, or (c) one of the words &quot;super&quot; or
+&quot;sub&quot;. 
+
+<table border=1>
+<tr> <th> Program Segment </th> <th> Result </th> </tr>
+
+<tr>
+  <td>
+<pre>
+Superclass obj1 = new Subclass ( ); 
+obj1.print ( );
+</pre>
+  </td>
+  <td>
+    sub
+  </td>
+</tr>
+
+<tr>
+  <td>
+<pre>
+Subclass obj2 = new Superclass ( ); 
+obj2.print ( );
+</pre>
+  </td>
+  <td>
+    compile-time&nbsp;error
+  </td>
+</tr>
+
+<tr>
+  <td>
+<pre>
+Superclass obj3 = new Superclass ( ); 
+((Subclass) obj3).print ( );
+</pre>
+  </td>
+  <td>
+    runtime&nbsp;error
+  </td>
+</tr>
+
+<tr>
+  <td>
+<pre>
+Subclass obj4 = new Subclass ( ); 
+((Superclass) obj4).print ( );
+</pre>
+  </td>
+  <td>
+    sub
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
+

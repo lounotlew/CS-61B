@@ -1,0 +1,32 @@
+DB61B System.  Version 3.0
+Loaded schedule.db
+Loaded enrolled.db
+Loaded students.db
+Loaded flavors.db
+Contents of flavors:
+  blue greasy 4 2 John 61B
+  red spicy 3 3 Jack 61A
+  yellow tangy 2 1 Sam 61B
+  green milky 5 4 Jack 61A
+  green greasy 4 3 Jack 61A
+  yellow milky 2 2 Paul 61C
+Search results:
+  red spicy
+  green milky
+  green greasy
+Search results:
+  blue John
+  red Jack
+  yellow Sam
+  green Jack
+Contents of moreFlavors:
+  greasy
+  spicy
+  tangy
+  milky
+Contents of moreFlavors:
+  greasy
+  spicy
+  tangy
+  milky
+  disgusting

@@ -1,0 +1,15 @@
+load students;
+load schedule;
+load enrolled;
+load drinks;
+create table drinks (Name, Price, Rating);
+print drinks;
+insert into drinks values 'coke', '2', '4';
+insert into drinks values 'sprite', '2', '3';
+insert into drinks values 'fakecoke', '1', '2';
+print drinks;
+store drinks;
+create table blank2 as select Name, Rating from drinks where drinks.Price = '2';
+print blank2;
+store blank2;
+quit;

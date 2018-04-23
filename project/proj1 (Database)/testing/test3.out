@@ -1,0 +1,17 @@
+DB61B System.  Version 3.0.
+Loaded enrolled.db
+Loaded schedule.db
+Loaded students.db
+Contents of grades:
+  34422223 Jack A 2012
+  23311114 John B 2012
+  45522223 Sam B+ 2013
+  64424223 Paul A- 2012
+Search results:
+  Jack A
+  John B
+  Paul A-
+Contents of filtered:
+  Jack A
+  John B
+  Paul A-

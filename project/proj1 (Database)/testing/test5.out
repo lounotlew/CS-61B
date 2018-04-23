@@ -1,0 +1,15 @@
+DB61B System.  Version 3.0
+Loaded students.db
+Loaded schedule.db
+Loaded enrolled.db
+Loaded drinks.db
+Contents of drinks:
+Contents of drinks:
+  sprite 2 3
+  coke 2 4
+  fakecoke 1 2
+Stored drinks.db
+Contents of blank2:
+  coke 4
+  sprite 3
+Stored blank2.db

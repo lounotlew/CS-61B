@@ -1,0 +1,12 @@
+load enrolled;
+load schedule;
+load students;
+create table grades (SID, Name, Grade, Year);
+insert into grades values '34422223', 'Jack', 'A', '2012';
+insert into grades values '23311114', 'John', 'B', '2012';
+insert into grades values '45522223', 'Sam', 'B+', '2013';
+insert into grades values '64424223', 'Paul', 'A-', '2012';
+print grades;
+select Name, Grade from grades where Year = '2012';
+create table filtered as select Name, Grade from grades where Year = '2012';
+print filtered;

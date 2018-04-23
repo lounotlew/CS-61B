@@ -1,0 +1,31 @@
+
+HW #5.
+
+Question D.
+
+1. Same shape as x^2 + x + log(x). For very large values of N, function is x^2. => Upper bounded by N^2. N = 0 is undefined; best case when there’s only 1 step, which is 1 + 1 + 0 = 2. So, lower bounded by 2.
+Omega(2), Big-Oh(N^2)
+
+2. Same shape as log(x^3 + x^2). For very large values of N, function = log(x^3) = 3*logx, which has the same shape as logx. So, upper bounded by logN. N = 0 is undefined; best case when there’s only 1 step, which is log(1) = 0.
+Omega(0), Big-Oh(log(N))
+
+3. Time to sum integers up to j i times is i. Time to sum that sum another N times is N. Bounded by i*N; N steps for each = N^2.
+Theta(N^2)
+
+4. Worst-case time is when the if statement is never run, so the method runs full iterations of both for-loops. Bounded by time for outer loop * time for inner loop = M*N.      Theta(M*N)
+
+5. Worst-case time: N continues to be changed by *1/2 until N <= 1. A parameter is being changed by a multiplicative factor, so the bound is a member of log(N).
+Theta(log(N))
+
+6. Find K, M such that |logb(f(x))| < |K*log10(f(x))| for x > M;
+
+logb(f(x)) < log10(f(x))
+logb(f(x)) < log10(f(x)) / logb
+1/K * logb(f(x)) < log(fx)) / logb
+
+=> K = 1
+Since this is true for all values of x, works for all x that is > 0 (undefined at 0). So, M = 0.
+
+7. Let p(x) be a polynomial in x with degree N. Then, for very large values of N, we know that log(p(x)) = log(x^N) = N*log(x). Since coefficients are negligible, the function log(p(x)) has the same shape as log(x). So, log(p(x)) is a member of O(log(x)).
+
+8. Since the function is a positive, non-decreasing function, as n —> +infinity, f(n) —> + infinity. So, for very large values of N, Ceiling(f(N)) still takes ~N steps to complete, which is bounded by f(N), which also takes N steps to complete. 

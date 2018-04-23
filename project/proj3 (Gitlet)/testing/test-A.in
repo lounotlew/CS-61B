@@ -1,0 +1,47 @@
+# WELCOME TO TEST-A
+# FOR: COMMIT, LOG.
+
+> init
+<<<
++ guw.txt guw.txt
+> add guw.txt
+<<<
+> commit "version 1 of guw.txt"
+<<<
++ guw.txt tonguw.txt
+> add guw.txt
+<<<
+> commit "version 2 of guw.txt"
+<<<
+= guw.txt tonguw.txt
+# Each ${HEADER} captures its commit UID.
+D UID "[a-f0-9]+"
+D HEADER "Commit (${UID})"
+D DATE "\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d"
+> log
+===
+${HEADER}
+${DATE}
+version 2 of guw.txt
+
+===
+${HEADER}
+${DATE}
+version 1 of guw.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+# UID of second version
+D UID2 "${1}"
+# UID of current version
+D UID1 "${2}"
+> checkout ${UID1} -- guw.txt
+<<<
+= guw.txt guw.txt
+> checkout ${UID2} -- guw.txt
+<<<
+= guw.txt tonguw.txt

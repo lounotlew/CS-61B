@@ -1,0 +1,35 @@
+Results for InsertRandomSpeedTest:
+
+(In order of LinkedList, BSTStringSet, Java TreeSet)
+
+N = 10
+0.00s for all
+
+N = 100
+0.00s for all
+
+N = 1000
+0.01s, 0.00s, 0.00s
+
+N = 10000
+0.37s, 0.01s, 0.01s
+
+Results for InsertInOrderSpeedTest:
+
+(In order of LinkedList, BSTStringSet, Java TreeSet)
+
+N = 10
+0.00s for all
+
+N = 100
+0.00s for all
+
+N = 1000
+0.02s, 0.01s, 0.01s
+
+N = 10000
+0.56s, 0.02s, 0.02s
+
+Explain anything interesting that you might have observed above:
+
+BSTStringSet/Java TreeSet seem to have the same runtime (or at least very similar, since they have the same data structure), and is much faster than the LinkedListStringSet as N >>> 0.

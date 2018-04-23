@@ -1,0 +1,36 @@
+# WELCOME TO TEST C FOR MERGE CHECKOUT AND OTHER STUFF.
+# Create two branches and merge other into master.
+I helper3.in
+> branch other
+<<<
++ h.txt guw.txt
+> add h.txt
+<<<
+> rm g.txt
+<<<
+> commit "Add h.txt and remove g.txt"
+<<<
+> checkout other
+<<<
+> rm f.txt
+<<<
++ k.txt tonguw.txt
+> add k.txt
+<<<
+> commit "Add k.txt and remove f.txt"
+<<<
+> checkout master
+<<<
+> merge other
+<<<
+* f.txt
+* g.txt
+= h.txt guw.txt
+= k.txt tonguw.txt
+> log
+===
+${COMMIT_HEAD}
+Merged master with other\.
+${ARBLINES}
+<<<*
+I blank.inc
